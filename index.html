@@ -9,28 +9,137 @@
     <meta content="Development portfolio of Mukesh " name="description" property="og:description">
 
     <!-- Link to the relevant stylesheet -->
-    <link href="./Assets/style.css" rel="stylesheet">
+    <link href="./static/css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- Load JQuery, as our little script depends on it -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,600,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="./Assets/index.js"></script>
+    <script src="./static/js/index.js"></script>
+
+
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/mdb.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="./static/css/util.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/main.css">
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+        p {
+            border-right: solid 3px rgba(0, 255, 0, .75);
+            white-space: nowrap;
+            overflow: hidden;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 28px;
+            color: black;
+        }
+        /* Animation */
+        
+        p {
+            animation: animated-text 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite;
+        }
+        /* text animation */
+        
+        @keyframes animated-text {
+            from {
+                width: 0;
+            }
+            to {
+                width: 472px;
+            }
+        }
+        /* cursor animations */
+        
+        @keyframes animated-cursor {
+            from {
+                border-right-color: rgba(0, 255, 0, .75);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+    </style> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+        p {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 35px;
+        }
+        
+        @media (min-width: 600px) {
+            p {
+                width: 500px;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            p {
+                width: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="preloader"></div>
-    <main>
 
+    <div class="preloader"></div>
+    <div style="background-image: url(./static/images/IMG_2489-min.JPG);height: 100%;background-size: cover;opacity: 0.2;">
+    </div>
+    <!--/.Navbar -->
+    <main>
         <!-- The Intro section begins -->
         <section class="intro">
 
             <div class="intro-text">
                 <!-- Seperates the text section from the arrow. -->
+                <p class="d-none" id="typing_data">
+                    Hi! &mdash; My name is <span>Mukesh</span>, I'm a <span>MCA Student</span> in Anna University, Chennai
+                </p>
                 <div class="Hi">
-                    <h1>Hi! 👋 &mdash; My name is <span>Mukesh</span>, I'm a <span>developer</span> 👨🏻‍💻 located in Chennai, India.</h1>
+                    <p id="typing">
+                        Hi! &mdash; My name is <span>Mukesh</span>, I'm a <span>MCA Student</span> in Anna University, Chennai
+                    </p>
                 </div>
+                <script>
+                    function typing() {
+                        var str = $("#typing_data").html().trim()
+                        $("#typing").html("")
+                        var content = ""
+                        var isSpan = false
+                        for (let i = 0; i < str.length; i++) {
+
+                            if (str[i] == "<") {
+                                if (str[i + 1] == "/") {
+                                    isSpan = false
+                                    i++
+                                } else {
+                                    isSpan = true
+                                }
+                                i += 5
+                            }
+                            if (str[i] == ">") {
+                                continue
+                            }
+                            if (isSpan) {
+                                content += `<span>${str[i]}</span>`
+                            } else {
+                                content += `<p>${str[i]}</p>`
+                            }
+                        }
+
+                        $(content).hide().appendTo('#typing').each(function(i) {
+                            $(this).delay(100 * i).css({
+                                display: 'inline',
+                                opacity: 0
+                            }).animate({
+                                opacity: 1
+                            }, 100);
+                        });
+                    }
+                    typing()
+                    setInterval(typing, 10000)
+                </script>
             </div>
 
         </section>
@@ -40,12 +149,12 @@
             <div class="wrapper">
                 <ul>
                     <li>
-                        <a class="text-dark" href="https://www.linkedin.com/" target="_blank">
+                        <a style="font-family: 'Source Code Pro', monospace;" class="text-dark grey-text" href="https://www.linkedin.com/" target="_blank">
                             <i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin
                         </a>
                     </li>
                     <li>
-                        <a class="text-dark" href="https://github.com/ilmnmukesh" target="_blank">
+                        <a style="font-family: 'Source Code Pro', monospace;" class="text-dark" href="https://github.com/ilmnmukesh" target="_blank">
                             <i class="fa fa-github" aria-hidden="true"></i>GitHub</a>
                     </li>
                 </ul>
@@ -53,9 +162,13 @@
         </footer>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
+
+    <script type="text/javascript" src="./static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/js/popper.min.js"></script>
+    <script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./static/js/mdb.min.js"></script>
 </body>
 
 </html>
