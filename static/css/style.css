@@ -6,7 +6,9 @@
     list-style: none
 }
 
-.projects,.contact,footer {
+.projects,
+.contact,
+footer {
     text-align: center
 }
 
@@ -16,11 +18,17 @@ html {
     -webkit-tap-highlight-color: transparent
 }
 
-*,*::before,*::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit
 }
 
-html,body,ul,ol,figure {
+html,
+body,
+ul,
+ol,
+figure {
     margin: 0;
     padding: 0
 }
@@ -37,7 +45,9 @@ img {
     vertical-align: middle
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     margin: 0
 }
 
@@ -51,9 +61,12 @@ p {
     display: none;
 }
 
+
 /* End of Reset section */
 
+
 /************************/
+
 
 /* Main body styles */
 
@@ -76,7 +89,8 @@ a {
     outline: none
 }
 
-a:hover,a:focus {
+a:hover,
+a:focus {
     color: #757575;
     outline: none
 }
@@ -99,9 +113,12 @@ b {
     z-index: 600
 }
 
+
 /* Main body styles end */
 
+
 /************************/
+
 
 /* Intro section styles */
 
@@ -114,7 +131,7 @@ b {
 
 @media (max-width: 768px) {
     .Hi {
-        padding:0 1rem
+        padding: 0 1rem
     }
 }
 
@@ -125,7 +142,7 @@ b {
 }
 
 .intro {
-    position: fixed;
+    position: -webkit-sticky;
     top: 0;
     height: 80vh;
     width: 100%;
@@ -141,7 +158,7 @@ b {
 }
 
 .intro span {
-    color: rgb(3, 42, 233);
+    color: #9c27b0 !important;
 }
 
 .intro h1 {
@@ -154,9 +171,8 @@ b {
 
 @media (max-width: 768px) {
     .intro {
-        text-align:center
+        text-align: center
     }
-
     .intro h1 {
         width: 100%
     }
@@ -170,9 +186,12 @@ b {
     bottom: 2rem
 }
 
+
 /* Intro section style ends */
 
+
 /****************************/
+
 
 /* Project section begins */
 
@@ -221,7 +240,7 @@ a.project-item {
 
 @media (min-width: 769px) {
     a.project-item {
-        width:50%;
+        width: 50%;
         float: left
     }
 }
@@ -242,9 +261,8 @@ a.project-item:hover .project-text h2:after {
 
 @media (max-width: 768px) {
     a.project-item .project-overlay {
-        opacity:.7
+        opacity: .7
     }
-
     a.project-item .project-text {
         top: 50%;
         opacity: 1
@@ -283,9 +301,12 @@ img {
     width: 100%
 }
 
+
 /* Project style section ends */
 
+
 /******************************/
+
 
 /* Contact section begins */
 
@@ -326,20 +347,24 @@ a.button-slide:before {
     color: rgb(3, 42, 233)
 }
 
-a.button-slide:hover,a.button-slide:focus {
+a.button-slide:hover,
+a.button-slide:focus {
     background-color: #fafafa;
 }
 
-a.button-slide:hover span,a.button-slide:focus span {
+a.button-slide:hover span,
+a.button-slide:focus span {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%)
 }
 
-a.button-slide:hover:before,a.button-slide:focus:before {
+a.button-slide:hover:before,
+a.button-slide:focus:before {
     top: 0
 }
 
-footer, .content {
+footer,
+.content {
     padding: 6rem 0 3rem;
 }
 
@@ -400,12 +425,16 @@ footer ul li a:hover:after {
     transform: scaleX(1)
 }
 
+
 /* Contact section ends */
+
 
 /****************************/
 
+
 /* PopUp section begins */
-.popUp{
+
+.popUp {
     color: black;
     /* height: 70vh; */
     width: 80vw;
@@ -418,7 +447,7 @@ footer ul li a:hover:after {
     grid-template-columns: 55% 45%;
 }
 
-.popUp .popUpImg{
+.popUp .popUpImg {
     background: url('https://images.unsplash.com/photo-1526049997133-25caee4c5796?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4a785d2392ba5c7683a2b09ee1b40b20&auto=format&fit=crop&w=1048&q=80');
     background-position: center;
     background-size: cover;
@@ -426,12 +455,12 @@ footer ul li a:hover:after {
     background-position: center
 }
 
-.popUp div:nth-child(2){
+.popUp div:nth-child(2) {
     padding: 10vh 2em;
     position: relative;
-} 
+}
 
-.popUp span{
+.popUp span {
     display: block;
     position: absolute;
     top: 4%;
@@ -441,26 +470,26 @@ footer ul li a:hover:after {
     background-color: black;
     color: honeydew;
     text-align: center;
-    right: 5%; 
+    right: 5%;
     cursor: pointer;
     user-select: none;
 }
 
-.popUp div:nth-child(2) h1{
+.popUp div:nth-child(2) h1 {
     font-size: 2.3em;
     margin-bottom: 1em;
 }
 
-.popUp div:nth-child(2) p{
+.popUp div:nth-child(2) p {
     font-size: 0.9em;
 }
 
-.popUp div:nth-child(2) div{
+.popUp div:nth-child(2) div {
     display: grid;
     grid-template-columns: repeat(2, 10%);
 }
 
-.popUp div:nth-child(2) div a:nth-child(1){
+.popUp div:nth-child(2) div a:nth-child(1) {
     width: 20px;
     height: 20px;
     background: url('https://image.flaticon.com/icons/svg/1051/1051377.svg');
@@ -468,7 +497,7 @@ footer ul li a:hover:after {
     display: block;
 }
 
-.popUp div:nth-child(2) div a:nth-child(2){
+.popUp div:nth-child(2) div a:nth-child(2) {
     width: 20px;
     height: 20px;
     background: url('https://image.flaticon.com/icons/svg/1246/1246334.svg');
@@ -476,21 +505,23 @@ footer ul li a:hover:after {
     display: block;
 }
 
+
 /****************************/
+
 
 /* PopUp section ends for DESKTOP VIEW */
 
+
 /* Tablet styling for popUp */
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .popUp{
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .popUp {
         width: 95vw;
         left: 2.5vw;
         display: block;
         top: 5vh;
     }
-
-    .popUp .popUpImg{
+    .popUp .popUpImg {
         background-size: cover;
         background-position: center;
         /* display: none; */
@@ -498,22 +529,23 @@ footer ul li a:hover:after {
         height: 50vh;
     }
 }
+
 
 /* END OF Tablet styling for popUp */
 
 
 /* START OF styling mobile view for popUp */
+
 @media (min-width: 320px) and (max-width: 480px) {
- .popUp{
+    .popUp {
         width: 95vw;
         left: 2.5vw;
         display: block;
-         top: 1vh;
-         height: 140vh;
-         position: static;
+        top: 1vh;
+        height: 140vh;
+        position: static;
     }
-
-    .popUp .popUpImg{
+    .popUp .popUpImg {
         background-size: cover;
         background-position: center;
         /* display: none; */
@@ -521,168 +553,192 @@ footer ul li a:hover:after {
         height: 50vh;
     }
 }
+
+
 /* END OF styling mobile view for popUp */
+
 
 /* ************************************ */
 
+
 /* Styling for form on DESKTOP/PC VIEW  */
-#form { 
-  width: 60%;
-  margin: 0 auto;
-  text-align: left;
-}
-#form h1 { 
-  font-size: 2em;
-  text-transform: uppercase;
-}
-#form p{ 
-  margin-bottom: 3.2em;
-  font-size: 1em;
-  color: white;
-  background-color: #1004c5;
-  width: max-content;
-  padding: 0.4em;
-  border-radius: 100px;
-}
-#form form { 
-  display: block;
-  padding: 1em auto;
-}
-#form form input { 
-  display: block;
-  width: 80%;
-  padding: 1em;
-  color: #616161;
-  margin: 1em 0;
-  font-size: 1.2em;
-  font-family:  "Work Sans", Helvetica, sans-serif;
-  font-weight: lighter;
-  border-radius: 4px;
-  border: 1px solid #000000a6;
-  transition: 0.8s;
-}
-#form form input:focus { 
-  border: 1.2px solid #1004c5;
-}
-#form form textarea { 
-  width: 90%;
-  display: block;
-  padding: 1em;
-  font-size: 1.2em;
-  height: 30vh;
-  border: 1px solid #000000a6;
-  transition: 0.8s;
-  border-radius: 4px;
-  font-family:  "Work Sans", Helvetica, sans-serif;
-  font-weight: lighter;
-}
-#form form button{ 
-  background-color: #1004c5;
-  color: white;
-  border: 0px transparent;
-  font-size: 1.4em;
-  font-family:  "Work Sans", Helvetica, sans-serif;
-  font-weight: bolder;
-  width: 13vw;
-  padding: 1.2em 2.2em;
-  margin: 1em 0;
-  cursor: pointer;
-  transition: all 0.6s;
-  position: relative;
-  border-radius: 100px;
-} 
 
-#form form button::before { 
-  width: 30px;
-  height: 30px;
-  background: url('./Assets/right-arrow.svg');
-  content: '';
-  display: block;
-  position: absolute;
-  left: 10%;
-  background-position: center;
-  background-size: contain;
-  transition:  0.7s;
-  top: 30%;
+#form {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
 }
 
-#form form #buttonDiv { 
-  cursor: pointer;
-  width: 13vw;
+#form h1 {
+    font-size: 2em;
+    text-transform: uppercase;
 }
 
-#form form #buttonDiv:hover ::before{
-  left: 80%;
-  z-index: 0.61;
-  animation: sending 1 0.3s ;
+#form p {
+    margin-bottom: 3.2em;
+    font-size: 1em;
+    color: white;
+    background-color: #1004c5;
+    width: max-content;
+    padding: 0.4em;
+    border-radius: 100px;
 }
 
+#form form {
+    display: block;
+    padding: 1em auto;
+}
+
+#form form input {
+    display: block;
+    width: 80%;
+    padding: 1em;
+    color: #616161;
+    margin: 1em 0;
+    font-size: 1.2em;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    font-weight: lighter;
+    border-radius: 4px;
+    border: 1px solid #000000a6;
+    transition: 0.8s;
+}
+
+#form form input:focus {
+    border: 1.2px solid #1004c5;
+}
+
+#form form textarea {
+    width: 90%;
+    display: block;
+    padding: 1em;
+    font-size: 1.2em;
+    height: 30vh;
+    border: 1px solid #000000a6;
+    transition: 0.8s;
+    border-radius: 4px;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+#form form button {
+    background-color: #1004c5;
+    color: white;
+    border: 0px transparent;
+    font-size: 1.4em;
+    font-family: "Work Sans", Helvetica, sans-serif;
+    font-weight: bolder;
+    width: 13vw;
+    padding: 1.2em 2.2em;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: all 0.6s;
+    position: relative;
+    border-radius: 100px;
+}
+
+#form form button::before {
+    width: 30px;
+    height: 30px;
+    background: url('./Assets/right-arrow.svg');
+    content: '';
+    display: block;
+    position: absolute;
+    left: 10%;
+    background-position: center;
+    background-size: contain;
+    transition: 0.7s;
+    top: 30%;
+}
+
+#form form #buttonDiv {
+    cursor: pointer;
+    width: 13vw;
+}
+
+#form form #buttonDiv:hover ::before {
+    left: 80%;
+    z-index: 0.61;
+    animation: sending 1 0.3s;
+}
 
 @keyframes sending {
-  from { 
-     opacity: 0.4;
-     /* z-index: -1; */
-  }
-
-  to {
-    opacity: 0.8; 
-    z-index: -1;
-  }
+    from {
+        opacity: 0.4;
+        /* z-index: -1; */
+    }
+    to {
+        opacity: 0.8;
+        z-index: -1;
+    }
 }
 
+
 /********************/
+
 
 /*END OF Styling for form on DESKTOP/PC VIEW  */
 
+
 /********************/
 
+
 /* Styling for form on TABLET VIEW  */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  #form { 
-    text-align: left;
-    padding: 2em;
-  }
-  #form form #buttonDiv { 
-    width: 100vw;
-  }
-  #form form button { 
-    width: 30vw;
-  }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #form {
+        text-align: left;
+        padding: 2em;
+    }
+    #form form #buttonDiv {
+        width: 100vw;
+    }
+    #form form button {
+        width: 30vw;
+    }
 }
+
+
 /********************/
+
 
 /* END Styling for form on TABLET VIEW  */
 
+
 /********************/
+
 
 /* Styling for form on MOBILE VIEW  */
-@media (min-width: 320px) and (max-width: 480px) {
-  #form { 
-    text-align: left;
-    padding: 0.7em;
-    width: 100%;
-  }
-  #form form #buttonDiv { 
-    width: 100vw;
-  }
-  #form form button { 
-    width: 60vw;
-    padding: 0.8em 1.2em;
-  }
-  #form form button::before { 
-    width: 20px;
-    height: 20px;
-    left: 15%;
-    top: 33%;
-  } 
-  #form form input, #form form textarea { 
-    width: 100%;
-  }
 
-  #form form #buttonDiv { 
-    width: 60vw;
-  }
+@media (min-width: 320px) and (max-width: 480px) {
+    #form {
+        text-align: left;
+        padding: 0.7em;
+        width: 100%;
+    }
+    #form form #buttonDiv {
+        width: 100vw;
+    }
+    #form form button {
+        width: 60vw;
+        padding: 0.8em 1.2em;
+    }
+    #form form button::before {
+        width: 20px;
+        height: 20px;
+        left: 15%;
+        top: 33%;
+    }
+    #form form input,
+    #form form textarea {
+        width: 100%;
+    }
+    #form form #buttonDiv {
+        width: 60vw;
+    }
 }
+
+
 /********************/
+
 
 /* END Styling for form on MOBILE VIEW  */
