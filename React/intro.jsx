@@ -2,7 +2,8 @@
 const Intro=()=>{
     React.useEffect(()=>{
         typing()
-        setInterval(typing, 10000)   
+        const intr=setInterval(typing, 10000)   
+        return () => clearInterval(intr);
     })
     function typing() {
         var str = $("#typing_data").html().trim()
