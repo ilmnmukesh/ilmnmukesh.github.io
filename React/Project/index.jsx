@@ -14,7 +14,7 @@ const Project=()=>{
         <div className="container" style={{paddingTop:100}}>
                 <div className="row">
         {datas.map((data)=>(            
-                <Card className="col-6">
+                <Card className="col-md-6">
                     <Card.Img variant="top" image={data.image}  as={Caro}  />
                     <Card.Body>
                         <h3>{data.name} using <span>{data.framework}</span></h3>
