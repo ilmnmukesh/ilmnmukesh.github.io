@@ -22,7 +22,7 @@ const Project=()=>{
                             {data.descirption}
                         </Card.Text>
                         <Card.Text className="text-center">
-                            <button className="btn btn-sm btn-purple">See Code</button>
+                            <a href={data.source} target="_blank" className="btn btn-sm btn-purple">See Code</a>
                             <a href={data.link} target="_blank" className="btn btn-sm btn-purple">See Project</a>
                         </Card.Text>
                     </Card.Body>
