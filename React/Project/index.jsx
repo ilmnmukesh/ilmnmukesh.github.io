@@ -2,7 +2,7 @@ const datas=[{
     "name": "Web Chat App",
     "framework": "Django",
     "link": "https://mukesh28.pythonanywhere.com",
-    "source":"",
+    "source":"https://github.com/ilmnmukesh/web-chat-django",
     "descirption": "In this Project, I have used to Design Chat app using Firebase and host in pythonanywhere",
     "image": [
         "React/Image/Chat/home1.png",
@@ -14,7 +14,7 @@ const Project=()=>{
         <div className="container" style={{paddingTop:100}}>
                 <div className="row">
         {datas.map((data)=>(            
-                <Card className="col-md-6">
+                <Card className="col-lg-6">
                     <Card.Img variant="top" image={data.image}  as={Caro}  />
                     <Card.Body>
                         <h3>{data.name} using <span>{data.framework}</span></h3>
