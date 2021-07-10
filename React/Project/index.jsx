@@ -1,14 +1,3 @@
-const datas=[{
-    "name": "Web Chat App",
-    "framework": "Django",
-    "link": "https://mukesh28.pythonanywhere.com",
-    "source":"https://github.com/ilmnmukesh/web-chat-django",
-    "descirption": "In this Project, I have used to Design Chat app using Firebase and host in pythonanywhere",
-    "image": [
-        "React/Image/Chat/home1.png",
-        "React/Image/Chat/login1.png"
-    ]
-}]
 const Project=()=>{
     React.useEffect(()=>{
         $(".nav-link").removeClass("active")
