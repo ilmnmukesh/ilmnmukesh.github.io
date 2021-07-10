@@ -10,6 +10,10 @@ const datas=[{
     ]
 }]
 const Project=()=>{
+    React.useEffect(()=>{
+        $(".nav-link").removeClass("active")
+        $("[data-rb-event-key='projects']").addClass('active')
+    })
     return(
         <div className="container" style={{paddingTop:100}}>
                 <div className="row">
