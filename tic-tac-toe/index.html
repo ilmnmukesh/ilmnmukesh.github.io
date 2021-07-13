@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Mukesh</title>
+    <title>Tic Tac Toe</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,42 +25,6 @@
 
     <link rel="stylesheet" type="text/css" href="../static/css/util.css">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
-    <!-- <style>
-        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-        p {
-            border-right: solid 3px rgba(0, 255, 0, .75);
-            white-space: nowrap;
-            overflow: hidden;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 28px;
-            color: black;
-        }
-        /* Animation */
-        
-        p {
-            animation: animated-text 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite;
-        }
-        /* text animation */
-        
-        @keyframes animated-text {
-            from {
-                width: 0;
-            }
-            to {
-                width: 472px;
-            }
-        }
-        /* cursor animations */
-        
-        @keyframes animated-cursor {
-            from {
-                border-right-color: rgba(0, 255, 0, .75);
-            }
-            to {
-                border-right-color: transparent;
-            }
-        }
-    </style> -->
     <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script crossorigin src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
@@ -106,69 +70,86 @@
         #app {
             z-index: 1;
         }
-        
-        #app:before {
+        /* #app:before {
             content: "";
             position: absolute;
             z-index: -1;
-            background-image: url(../static/images/IMG_2489-min.JPG);
+            background-image: url(static/images/IMG_2489-min.JPG);
             background-repeat: no-repeat;
             background-size: cover;
             opacity: 0.2;
             height: 100%;
             width: 100%;
+        } */
+        
+        @media (min-width: 568px) {
+            .tic-border {
+                width: 360px;
+                height: 360px;
+            }
+            .tic-border-nested {
+                width: 120px;
+                height: 120px;
+            }
+            /* .tic-nested {
+                margin-top: ;
+            } */
         }
         
         @media only screen and (max-width: 568px) {
             .bg-sm-white {
                 background-color: white;
             }
+            .tic-border {
+                width: 276px;
+                height: 276px;
+            }
+            .tic-border-nested {
+                width: 92px;
+                height: 92px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="preloader"></div>
-    <!-- <div style="background-image: url(./static/images/IMG_2489-min.JPG);height: 100%;background-size: cover;opacity: 0.2;"></div> -->
+    <div class="preloader "></div>
     <div id="app"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../static/js/jquery.min.js"></script>
     <script type="text/javascript" src="../static/js/popper.min.js"></script>
     <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../static/js/mdb.min.js"></script>
-    <script type="text/javascript">
-        const datas = [{
-                "name": "Web Chat App",
-                "framework": "Django",
-                "link": "https://mukesh28.pythonanywhere.com",
-                "source": "https://github.com/ilmnmukesh/web-chat-django",
-                "descirption": "In this Project, I have used to Design Chat app using Firebase and host in pythonanywhere",
-                "image": [
-                    "../React/Image/Chat/home1.png",
-                    "../React/Image/Chat/login1.png"
-                ]
-            }, {
-                "name": "Tic Tac Toe",
-                "framework": "React",
-                "link": "https://ilmnmukesh.me/tic-tac-toe/",
-                "source": "https://github.com/ilmnmukesh/tic-tac-toe/",
-                "descirption": "In this Project, I have used to Design Gaming using Firebase and React demo live in this domain click this link to check out",
-                "image": [
-                    "../React/Image/Tic/login.png",
-                    "../React/Image/Tic/game_1.png",
-                ]
-            }
 
-        ]
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAT9-vlJ1LyCL4Pr8eJse379y-u7XWdIOQ",
+            authDomain: "tic-14407.firebaseapp.com",
+            databaseURL: "https://tic-14407-default-rtdb.firebaseio.com",
+            projectId: "tic-14407",
+            storageBucket: "tic-14407.appspot.com",
+            messagingSenderId: "32595709862",
+            appId: "1:32595709862:web:24b6b52fb445e3e91b4967",
+            measurementId: "G-BXRF1NB8SC"
+        };
+        firebase.initializeApp(firebaseConfig);
     </script>
-    <script type="text/babel" src="../React/declare.jsx"></script>
-    <script type="text/babel" src="../React/Footer/index.jsx"></script>
-    <script type="text/babel" src="../React/Header/index.jsx"></script>
-    <script type="text/babel" src="../React/Project/carosuel.jsx"></script>
-    <script type="text/babel" src="../React/Project/index.jsx"></script>
-    <script type="text/babel" src="../React/intro.jsx"></script>
-    <script type="text/babel" src="../React/info.jsx"></script>
-    <script type="text/babel" src="../React/index.jsx"></script>
+
+
+    <script type="text/babel" src="./React/Page/x.jsx"></script>
+    <script type="text/babel" src="./React/Page/o.jsx"></script>
+    <script type="text/babel" src="./React/Page/index.jsx"></script>
+    <script type="text/babel" src="./React/Page/friend.jsx"></script>
+    <script type="text/babel" src="./React/Page/playback.jsx"></script>
+    <script type="text/babel" src="./React/Start/index.jsx"></script>
+    <script type="text/babel" src="./React/index.jsx"></script>
+
 </body>
 
 </html>
