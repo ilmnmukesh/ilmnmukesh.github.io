@@ -128,9 +128,25 @@
 </head>
 
 <body>
-    <div class="preloader"></div>
+    <div class="preloader" style="background-color: white;">
+        <div class="text-center" style="padding-top: 250px;">
+            <div class="h3 text-center mb-5" style="font-family: 'Source Code Pro', monospace;">
+                Portfolio
+            </div>
+            <div class="spinner-grow grey-text" style="width: 1rem; height: 1rem;" role="status">
+                <span class="sr-only ">Loading...</span>
+            </div>
+            <div class="spinner-grow purple-text" style="width: 1rem; height: 1rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow grey-text" style="width: 1rem; height: 1rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+
     <!-- <div style="background-image: url(./static/images/IMG_2489-min.JPG);height: 100%;background-size: cover;opacity: 0.2;"></div> -->
-    <div id="app"></div>
+    <div id="app" style="display: none;"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./static/js/jquery.min.js"></script>
     <script type="text/javascript" src="./static/js/popper.min.js"></script>
@@ -160,6 +176,11 @@
             }
 
         ]
+    </script>
+    <script>
+        $("#app").ready(() => {
+            $("#app").removeAttr("style")
+        })
     </script>
     <script type="text/babel" src="React/declare.jsx"></script>
     <script type="text/babel" src="React/Footer/index.jsx"></script>
